@@ -22,4 +22,11 @@ Check you paths:
 ![RCTBaiduMap](https://image.ibb.co/jgeXVm/3_2.png)
 ![RCTBaiduMap](https://image.ibb.co/j8WqGR/3_3.png)
 ![RCTBaiduMap](https://image.ibb.co/iCBCVm/3_4.png)
-4. Build `Cmd + B`
+4. Navigate to `AppDelegate.m` add  `#import "RCTBaiduMapViewManager.h"`
+
+    In `application didFinishLaunchingWithOptions` method call:
+    `[RCTBaiduMapViewManager initSDK:@"YOU BAIDU KEY"];`
+
+5. Build project: `Cmd + B`
+
+## Andorid
