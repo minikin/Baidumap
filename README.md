@@ -1,19 +1,25 @@
 # Baidu Map SDK modules and view for React Native(Android & IOS), support react native 0.40+.
 
-More info on the way.
+# Installation
 
+1. `npm i https://github.com/minikin/Baidumap.git#develop --save`
+2. `react-native link`
 
-# Xcode
+# Additional steps
+## Xcode
 
-1. Project navigator -> Libraries -> Add Files to select baidumap/ios/RCTBaiduMap.xcodeproj
+1. Open Xcode project -> navigate to `Libraries` -> select `Add Files to Project` -> navigate to `node_modules/baidumap/ios/` ->
+select `RCTBaiduMap.xcodeproj`
+![RCTBaiduMap](https://image.ibb.co/dKaQGR/b1.png)
+Also add `mapapi.bundle` placed in `node_modules/baidumap/ios/lib/BaiduMapAPI_Map.framework/Resources/`
 
-2. Project navigator -> Build Phases -> Link Binary With Libraries select libRCTBaiduMap.a
-
-3. Project navigator -> Build Settings -> Search Paths， Framework search paths add  baidumap/ios/lib，Header search paths add baidumap/ios/RCTBaiduMap
-
-4. Add dependencies from folder baidumap/ios/lib in General -> Linked Frameworks and Libraries. 
-
-<!-- 5. CoreLocation.framework, QuartzCore.framework、OpenGLES.framework、SystemConfiguration.framework、CoreGraphics.framework、Security.framework、libsqlite3.0.tbd、CoreTelephony.framework、
-libstdc++.6.0.9.tbd -->
-
-5. Add BaiduMapAPI_Map.framework/Resources/mapapi.bundle
+2. Select your targent -> Navigate to `General` tab -> scroll down to `Linked Frameworks and Libraries` -> press `+` -> select `Add others...` -> navigate to  `node_modules/baidumap/ios/lib` -> select all frameworks.
+Do the same for `libcrypto.a` and `libssl.a` placed in `node_modules/baidumap/ios/lib/thirdlibs` . Also add `libsqlite3.0.tbd` and `libstdc++.6.0.9.tbd`
+![RCTBaiduMap](https://image.ibb.co/gS3HVm/b2.png)
+3. Navigate to `Build Settings` tab -> naviagte to `Search Paths`
+Check you paths:
+![RCTBaiduMap](https://image.ibb.co/nHUo36/3_1.png)
+![RCTBaiduMap](https://image.ibb.co/jgeXVm/3_2.png)
+![RCTBaiduMap](https://image.ibb.co/j8WqGR/3_3.png)
+![RCTBaiduMap](https://image.ibb.co/iCBCVm/3_4.png)
+4. Build `Cmd + B`
