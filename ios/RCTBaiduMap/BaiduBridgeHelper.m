@@ -12,11 +12,10 @@
 
 @implementation BaiduBridgeHelper
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE(BaiduBridgeHelper)
 
 RCT_EXPORT_METHOD(setPinImageWith:(NSString *)imageName) {
   UIImage *image = [UIImage imageWithContentsOfFile: imageName];
-  RCTLogInfo(@"======== JS NEWS ======== %@",image.description);
   if (image != nil) {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:image forKey:pinImageKey];
     [[NSNotificationCenter defaultCenter] postNotificationName:sendCustomPinImage object:self userInfo:userInfo];

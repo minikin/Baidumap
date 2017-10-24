@@ -8,7 +8,6 @@
 
 #import "GeolocationModule.h"
 
-
 @implementation GeolocationModule {
   BMKPointAnnotation* _annotation;
 }
@@ -34,33 +33,24 @@ RCT_EXPORT_METHOD(getBaiduCoorFromGPSCoor:(double)lat lng:(double)lng
 }
 
 RCT_EXPORT_METHOD(geocode:(NSString *)city addr:(NSString *)addr) {
-  
   [self getGeocodesearch].delegate = self;
-  
   BMKGeoCodeSearchOption *geoCodeSearchOption = [[BMKGeoCodeSearchOption alloc]init];
-  
   geoCodeSearchOption.city= city;
   geoCodeSearchOption.address = addr;
 }
 
 RCT_EXPORT_METHOD(reverseGeoCode:(double)lat lng:(double)lng) {
-  
   [self getGeocodesearch].delegate = self;
   CLLocationCoordinate2D baiduCoor = CLLocationCoordinate2DMake(lat, lng);
-  
   CLLocationCoordinate2D pt = (CLLocationCoordinate2D){baiduCoor.latitude, baiduCoor.longitude};
-  
   BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
   reverseGeoCodeSearchOption.reverseGeoPoint = pt;
 }
 
 RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
-  
   [self getGeocodesearch].delegate = self;
   CLLocationCoordinate2D baiduCoor = [self getBaiduCoor:lat lng:lng];
-  
   CLLocationCoordinate2D pt = (CLLocationCoordinate2D){baiduCoor.latitude, baiduCoor.longitude};
-  
   BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
   reverseGeoCodeSearchOption.reverseGeoPoint = pt;
 }
@@ -175,6 +165,5 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
   
   return baiduCoor;
 }
-
 
 @end

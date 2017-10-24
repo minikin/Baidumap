@@ -20,7 +20,6 @@
 @interface RCTBaiduMapView : BMKMapView <BMKMapViewDelegate>
 
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
-
 -(void)setZoom:(float)zoom;
 -(void)setCenterLatLng:(NSDictionary *)LatLngObj;
 -(void)setMarker:(NSDictionary *)Options;

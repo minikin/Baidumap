@@ -21,5 +21,4 @@
   [self.bridge.eventDispatcher sendDeviceEventWithName:name body:body];
 }
 
-
 @end

@@ -9,9 +9,7 @@
 #ifndef GeolocationModule_h
 #define GeolocationModule_h
 
-
 #import <BaiduMapAPI_Location/BMKLocationService.h>
-
 #import "BaseModule.h"
 #import "RCTBaiduMapViewManager.h"
 
