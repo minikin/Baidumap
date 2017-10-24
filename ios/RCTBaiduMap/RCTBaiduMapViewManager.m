@@ -103,7 +103,6 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
 }
 
 -(void)mapView:(RCTBaiduMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate {
-  NSLog(@"onClickedMapBlank");
   NSDictionary* event = @{
                           @"type": @"onMapClick",
                           @"params": @{
@@ -137,7 +136,6 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
 }
 
 - (void) mapView:(RCTBaiduMapView *)mapView onClickedMapPoi:(BMKMapPoi *)mapPoi {
-  NSLog(@"onClickedMapPoi");
   NSDictionary* event = @{
                           @"type": @"onMapPoiClick",
                           @"params": @{
@@ -151,7 +149,6 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
 }
 
 -(void)mapStatusDidChanged: (RCTBaiduMapView *)mapView   {
-  NSLog(@"mapStatusDidChanged");
   CLLocationCoordinate2D targetGeoPt = [mapView getMapStatus].targetGeoPt;
   NSDictionary* event = @{
                           @"type": @"onMapStatusChange",
@@ -173,7 +170,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
                                                initWithAnnotation:annotation
                                                reuseIdentifier:@"myAnnotation"];
     newAnnotationView.image = pinImage;
-    newAnnotationView.animatesDrop = YES
+    newAnnotationView.animatesDrop = YES;
     return newAnnotationView;
   }
   return nil;
