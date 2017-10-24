@@ -1,4 +1,4 @@
-package org.lovebing.reactnative.baidumap;
+package baidumap;
 
 import android.util.Log;
 

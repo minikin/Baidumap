@@ -1,4 +1,4 @@
-package org.lovebing.reactnative.baidumap;
+package baidumap;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
