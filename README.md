@@ -1,4 +1,6 @@
-# Baidu Map SDK modules and view for React Native(Android & IOS), support react native 0.40+.
+# Wrapper of Baidu Map SDK to React Native.
+
+Based on [react-native-baidu-map](https://github.com/lovebing/react-native-baidu-map)
 
 # Installation
 
