@@ -3,7 +3,7 @@ import { NativeModules, } from 'react-native';
 const module = NativeModules.BaiduBridgeHelper;
 
 export default  {
-    
+
     setPinImageWith(imagePath){
         module.setPinImageWith(imagePath)
     },
@@ -11,7 +11,7 @@ export default  {
     setCustomMapStyle(enable){
         module.customMapStyle(enable)
     },
-
+    
     setCustomMapWithJSON(stylePath) {
         module.setCustomMapStyleWith(stylePath)
     }

@@ -1,10 +1,8 @@
 import {
-  requireNativeComponent,
   NativeModules,
   Platform,
   DeviceEventEmitter
 } from 'react-native';
-import PropTypes from 'prop-types';
 
 const _module = NativeModules.BaiduGeolocationModule;
 

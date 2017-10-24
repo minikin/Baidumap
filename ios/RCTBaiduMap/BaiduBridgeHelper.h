@@ -13,8 +13,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseModule.h"
 
-@interface BaiduBridgeHelper : BaseModule 
-
+@interface BaiduBridgeHelper : BaseModule
 @end
 
 #endif /* BaiduBridgeHelper_h */
