@@ -1,6 +1,10 @@
 # Wrapper of Baidu Map SDK to React Native.
 
+### WIP!
+
 Based on [react-native-baidu-map](https://github.com/lovebing/react-native-baidu-map)
+
+![Custom map style and markers](https://image.ibb.co/bLrT36/ios.png)
 
 # Installation
 
