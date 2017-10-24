@@ -5,13 +5,13 @@ import {
   Platform,
   DeviceEventEmitter
 } from 'react-native';
-
-import React, {
-  Component,
-  PropTypes
-} from 'react';
-
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MapTypes from './MapTypes';
+
+const BaiduMapView = requireNativeComponent('RCTBaiduMapView', MapView, {
+  nativeOnly: {onChange: true}
+});
 
 export default class MapView extends Component {
   static propTypes = {
@@ -61,7 +61,3 @@ export default class MapView extends Component {
     return <BaiduMapView {...this.props} onChange={this._onChange.bind(this)}/>;
   }
 }
-
-const BaiduMapView = requireNativeComponent('RCTBaiduMapView', MapView, {
-  nativeOnly: {onChange: true}
-});
