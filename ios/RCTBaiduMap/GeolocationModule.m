@@ -23,7 +23,6 @@ RCT_EXPORT_MODULE(BaiduGeolocationModule);
 RCT_EXPORT_METHOD(getBaiduCoorFromGPSCoor:(double)lat lng:(double)lng
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject) {
-  NSLog(@"getBaiduCoorFromGPSCoor");
   CLLocationCoordinate2D baiduCoor = [self getBaiduCoor:lat lng:lng];
   
   NSDictionary* coor = @{
@@ -42,14 +41,6 @@ RCT_EXPORT_METHOD(geocode:(NSString *)city addr:(NSString *)addr) {
   
   geoCodeSearchOption.city= city;
   geoCodeSearchOption.address = addr;
-  
-  BOOL flag = [[self getGeocodesearch] geoCode:geoCodeSearchOption];
-  
-  if(flag) {
-    NSLog(@"geo检索发送成功");
-  } else{
-    NSLog(@"geo检索发送失败");
-  }
 }
 
 RCT_EXPORT_METHOD(reverseGeoCode:(double)lat lng:(double)lng) {
@@ -61,13 +52,6 @@ RCT_EXPORT_METHOD(reverseGeoCode:(double)lat lng:(double)lng) {
   
   BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
   reverseGeoCodeSearchOption.reverseGeoPoint = pt;
-  
-  BOOL flag = [[self getGeocodesearch] reverseGeoCode:reverseGeoCodeSearchOption];
-  
-  if(flag) {
-    NSLog(@"逆向地理编码发送成功");
-  }
-  //[reverseGeoCodeSearchOption release];
 }
 
 RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
@@ -79,13 +63,6 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
   
   BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
   reverseGeoCodeSearchOption.reverseGeoPoint = pt;
-  
-  BOOL flag = [[self getGeocodesearch] reverseGeoCode:reverseGeoCodeSearchOption];
-  
-  if(flag) {
-    NSLog(@"逆向地理编码发送成功");
-  }
-  //[reverseGeoCodeSearchOption release];
 }
 
 -(BMKGeoCodeSearch *)getGeocodesearch{
@@ -117,9 +94,6 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
   NSMutableDictionary *body = [self getEmptyBody];
   
   if (error == BMK_SEARCH_NO_ERROR) {
-    // 使用离线地图之前，需要先初始化百度地图
-    [[BMKMapView alloc] initWithFrame:CGRectZero];
-    // 离线地图api或去citycode
     BMKOfflineMap *offlineMap = [[BMKOfflineMap alloc] init];
     NSArray *cityCodeArr = [offlineMap searchCity:result.addressDetail.city];
     if (cityCodeArr.count) {
