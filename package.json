@@ -1,6 +1,6 @@
 {
   "name": "baidumap",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Baidu Map SDK modules and view for React Native(Android & IOS)",
   "main": "index.js",
   "scripts": {
