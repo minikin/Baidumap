@@ -169,7 +169,11 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
     BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc]
                                                initWithAnnotation:annotation
                                                reuseIdentifier:@"myAnnotation"];
-    newAnnotationView.image = pinImage;
+    if (pinImage == nil) {
+      newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
+    } else {
+      newAnnotationView.image = pinImage;
+    }
     newAnnotationView.animatesDrop = YES;
     return newAnnotationView;
   }
