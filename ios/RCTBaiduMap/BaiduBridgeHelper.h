@@ -6,10 +6,15 @@
 //  Copyright © 2017 Sasha Prokhorenko All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <React/RCTBridgeModule.h>
-#import <UIKit/UIKit.h>
+#ifndef BaiduBridgeHelper_h
+#define BaiduBridgeHelper_h
 
-@interface BaiduBridgeHelper : NSObject <RCTBridgeModule>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "BaseModule.h"
+
+@interface BaiduBridgeHelper : BaseModule 
 
 @end
+
+#endif /* BaiduBridgeHelper_h */

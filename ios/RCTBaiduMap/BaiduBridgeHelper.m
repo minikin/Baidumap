@@ -12,6 +12,8 @@
 
 @implementation BaiduBridgeHelper
 
+@synthesize bridge = _bridge;
+
 RCT_EXPORT_MODULE(BaiduBridgeHelper)
 
 RCT_EXPORT_METHOD(setPinImageWith:(NSString *)imageName) {
