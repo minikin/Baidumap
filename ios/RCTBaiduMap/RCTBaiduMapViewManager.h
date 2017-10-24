@@ -2,8 +2,8 @@
 //  RCTBaiduMapViewManager.h
 //  RCTBaiduMap
 //
-//  Created by lovebing on Aug 6, 2016.
-//  Copyright © 2016 lovebing.org. All rights reserved.
+//  Created by Sasha Prokhorenko on Aug 6, 2016.
+//  Copyright © 2016 Sasha Prokhorenko. All rights reserved.
 //
 
 #ifndef RCTBaiduMapViewManager_h

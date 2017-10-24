@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C7CB1F1F9F317900D3B476 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7CB1E1F9F317900D3B476 /* Constants.m */; };
+		03C7CB221F9F31C300D3B476 /* BaiduBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7CB211F9F31C300D3B476 /* BaiduBridgeHelper.m */; };
 		EF154DCB1D56218D003146DF /* BaiduMapModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22621CC2C3BE0099E9B6 /* BaiduMapModule.h */; };
 		EF154DCC1D562193003146DF /* RCTBaiduMapViewManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF6660E71D55E68000DB8D08 /* RCTBaiduMapViewManager.h */; };
 		EF3C225A1CC2C30D0099E9B6 /* RCTBaiduMapView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */; };
@@ -33,6 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03C7CB1D1F9F317900D3B476 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		03C7CB1E1F9F317900D3B476 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		03C7CB201F9F31C300D3B476 /* BaiduBridgeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiduBridgeHelper.h; sourceTree = "<group>"; };
+		03C7CB211F9F31C300D3B476 /* BaiduBridgeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduBridgeHelper.m; sourceTree = "<group>"; };
 		EF3C22561CC2C30D0099E9B6 /* libRCTBaiduMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTBaiduMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBaiduMapView.h; sourceTree = "<group>"; };
 		EF3C225B1CC2C30D0099E9B6 /* RCTBaiduMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBaiduMapView.m; sourceTree = "<group>"; };
@@ -86,6 +92,10 @@
 				EF4ABB0C1DC378CF008E75C9 /* GeolocationModule.m */,
 				EF4ABB0E1DC37929008E75C9 /* BaseModule.h */,
 				EF4ABB0F1DC3793A008E75C9 /* BaseModule.m */,
+				03C7CB1D1F9F317900D3B476 /* Constants.h */,
+				03C7CB1E1F9F317900D3B476 /* Constants.m */,
+				03C7CB201F9F31C300D3B476 /* BaiduBridgeHelper.h */,
+				03C7CB211F9F31C300D3B476 /* BaiduBridgeHelper.m */,
 			);
 			path = RCTBaiduMap;
 			sourceTree = "<group>";
@@ -147,10 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4ABB0D1DC378CF008E75C9 /* GeolocationModule.m in Sources */,
+				03C7CB221F9F31C300D3B476 /* BaiduBridgeHelper.m in Sources */,
 				EF4ABB101DC3793B008E75C9 /* BaseModule.m in Sources */,
 				EF3C22641CC2C3D30099E9B6 /* BaiduMapModule.m in Sources */,
 				EF3C225C1CC2C30D0099E9B6 /* RCTBaiduMapView.m in Sources */,
 				EF6660E91D55E69B00DB8D08 /* RCTBaiduMapViewManager.m in Sources */,
+				03C7CB1F1F9F317900D3B476 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
