@@ -91,7 +91,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
 
 // MARK: - BMKMapViewDelegate
 
--(void)mapview:(BMKMapView *)mapView onDoubleClick:(CLLocationCoordinate2D)coordinate {
+-(void)mapview:(RCTBaiduMapView *)mapView onDoubleClick:(CLLocationCoordinate2D)coordinate {
   NSDictionary* event = @{
                           @"type": @"onMapDoubleClick",
                           @"params": @{
@@ -102,7 +102,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
   [self sendEvent:mapView params:event];
 }
 
--(void)mapView:(BMKMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate {
+-(void)mapView:(RCTBaiduMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate {
   NSLog(@"onClickedMapBlank");
   NSDictionary* event = @{
                           @"type": @"onMapClick",
@@ -114,7 +114,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
   [self sendEvent:mapView params:event];
 }
 
--(void)mapViewDidFinishLoading:(BMKMapView *)mapView {
+-(void)mapViewDidFinishLoading:(RCTBaiduMapView *)mapView {
   NSDictionary* event = @{
                           @"type": @"onMapLoaded",
                           @"params": @{}
@@ -122,7 +122,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
   [self sendEvent:mapView params:event];
 }
 
--(void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view {
+-(void)mapView:(RCTBaiduMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view {
   NSDictionary* event = @{
                           @"type": @"onMarkerClick",
                           @"params": @{
@@ -136,7 +136,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
   [self sendEvent:mapView params:event];
 }
 
-- (void) mapView:(BMKMapView *)mapView onClickedMapPoi:(BMKMapPoi *)mapPoi {
+- (void) mapView:(RCTBaiduMapView *)mapView onClickedMapPoi:(BMKMapPoi *)mapPoi {
   NSLog(@"onClickedMapPoi");
   NSDictionary* event = @{
                           @"type": @"onMapPoiClick",
@@ -150,7 +150,7 @@ RCT_CUSTOM_VIEW_PROPERTY(center, CLLocationCoordinate2D, RCTBaiduMapView) {
   [self sendEvent:mapView params:event];
 }
 
--(void)mapStatusDidChanged: (BMKMapView *)mapView   {
+-(void)mapStatusDidChanged: (RCTBaiduMapView *)mapView   {
   NSLog(@"mapStatusDidChanged");
   CLLocationCoordinate2D targetGeoPt = [mapView getMapStatus].targetGeoPt;
   NSDictionary* event = @{
