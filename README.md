@@ -4,7 +4,7 @@
 
 Based on [react-native-baidu-map](https://github.com/lovebing/react-native-baidu-map)
 
-![Custom map style and markers](https://image.ibb.co/bLrT36/ios.png)
+![Custom map style and markers](https://image.ibb.co/nA6pAm/ios2.png)
 
 # Installation
 
