@@ -17,6 +17,7 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MapViewLayoutParams;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.map.BaiduMap.OnMapStatusChangeListener;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
@@ -178,7 +179,7 @@ public class BaiduMapViewManager extends ViewGroupManager<MapView> {
 //            mMarkerText.setBackgroundResource(R.drawable.popup);
             mMarkerText.setPadding(32, 32, 32, 32);
         }
-        map.setOnMapStatusChangeListener(new BaiduMap.OnMapStatusChangeListener() {
+        map.setOnMapStatusChangeListener(new OnMapStatusChangeListener() {
 
             private WritableMap getEventParams(MapStatus mapStatus) {
                 WritableMap writableMap = Arguments.createMap();
@@ -191,8 +192,12 @@ public class BaiduMapViewManager extends ViewGroupManager<MapView> {
                 return writableMap;
             }
 
+            public void onMapStatusChangeStart(MapStatus status) {
+                
+            }
 
-            public void onMapStatusChangeStart(MapStatus mapStatus) {
+            @Override
+            public void onMapStatusChangeStart(MapStatus mapStatus, int reason) {
                 sendEvent(mapView, "onMapStatusChangeStart", getEventParams(mapStatus));
             }
 
