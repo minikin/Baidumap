@@ -1,4 +1,4 @@
-package minikin.me.rctbaidumap;
+package com.baidumap;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
