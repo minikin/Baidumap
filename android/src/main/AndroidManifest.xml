@@ -1,5 +1,9 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="minikin.me.rctbaidumap">
+    <application>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+    </application>
 </manifest>
   
