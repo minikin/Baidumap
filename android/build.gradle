@@ -24,11 +24,11 @@ android {
         abortOnError false
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDir 'libs'
-        }
-    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDir 'libs'
+//        }
+//    }
 
 }
 
