@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.facebook.fresco:fbcore-0.8.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fbcore-0.8.1.aar/9502de824643bea641d86a572a1ebeac/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fbcore-0.8.1.aar/9502de824643bea641d86a572a1ebeac/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/f6d18c0c1d038edb6e0accdfd5d6fbcac25c92cb/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f6d18c0c1d038edb6e0accdfd5d6fbcac25c92cb/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
