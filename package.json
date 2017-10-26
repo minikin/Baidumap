@@ -1,6 +1,6 @@
 {
   "name": "baidumap",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Baidu Map SDK modules and view for React Native",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,9 @@
     "url": "git+https://github.com/minikin/Baidumap.git"
   },
   "keywords": [
-    "Baidu Map",
-    "Map",
-    "China",
+    "baidu Map",
+    "map",
+    "china",
     "react-native",
     "ios",
     "android"
