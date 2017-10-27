@@ -5,7 +5,7 @@
 
 |      |  |
 | ---      | ---       |
-| ![Custom map style and markers](https://image.ibb.co/nA6pAm/ios2.png) | ![Custom map style and markers](https://image.ibb.co/mjZufm/andro.png) |
+| ![Custom map style and markers](https://image.ibb.co/nA6pAm/ios2.png) | ![Custom map style and markers](https://image.ibb.co/cz3iqm/wwe.png) |
 
 ## Features
 
