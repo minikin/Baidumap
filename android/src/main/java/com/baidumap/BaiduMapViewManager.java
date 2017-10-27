@@ -27,6 +27,10 @@ import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +42,7 @@ import java.util.List;
 public class BaiduMapViewManager extends ViewGroupManager<MapView> {
 
     private static final String REACT_CLASS = "RCTBaiduMapView";
+    private static String PATH = "custom_config_dark.json";
 
     private ThemedReactContext mReactContext;
 
@@ -57,7 +62,9 @@ public class BaiduMapViewManager extends ViewGroupManager<MapView> {
 
     public MapView createViewInstance(ThemedReactContext context) {
         mReactContext = context;
+        setMapCustomFile(context, PATH);
         MapView mapView =  new MapView(context);
+        mapView.setMapCustomEnable(true);
         setListeners(mapView);
         return mapView;
     }
@@ -78,6 +85,42 @@ public class BaiduMapViewManager extends ViewGroupManager<MapView> {
             }
         }
 
+    }
+
+    private void setMapCustomFile(ThemedReactContext context, String PATH) {
+        FileOutputStream out = null;
+        InputStream inputStream = null;
+        String moduleName = null;
+        try {
+            inputStream = context.getAssets()
+                    .open("customConfigdir/" + PATH);
+            byte[] b = new byte[inputStream.available()];
+            inputStream.read(b);
+
+            moduleName = context.getFilesDir().getAbsolutePath();
+            File f = new File(moduleName + "/" + PATH);
+            if (f.exists()) {
+                f.delete();
+            }
+            f.createNewFile();
+            out = new FileOutputStream(f);
+            out.write(b);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        MapView.setCustomMapStylePath(moduleName + "/" + PATH);
     }
 
     @ReactProp(name = "zoomControlsVisible")

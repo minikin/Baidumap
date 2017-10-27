@@ -87,7 +87,7 @@ Will be added soon.
 
 ## Credits
 
-Baidumap wrapper is based by [react-native-baidu-map](https://github.com/lovebing/react-native-baidu-map) and developed [@minikin](https://twitter.com/minikin)
+Baidumap wrapper is based on [react-native-baidu-map](https://github.com/lovebing/react-native-baidu-map) and developed [@minikin](https://twitter.com/minikin)
 
 ## License
 
