@@ -26,10 +26,10 @@ public class MarkerUtil {
     }
 
     public static Marker addMarker(MapView mapView, ReadableMap option) {
-        //BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_gcoding);
+        BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.marker);
         LatLng position = getLatLngFromOption(option);
         OverlayOptions overlayOptions = new MarkerOptions()
-//                .icon(bitmap)
+                .icon(bitmap)
                 .position(position)
                 .title(option.getString("title"));
 
